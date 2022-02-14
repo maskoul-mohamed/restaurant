@@ -9,7 +9,6 @@
 <body>
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid d-flex justify-content-end">
-    <a class="btn btn-lg btn-primary " href="add.php">Add To Menu</a>
+    <a class="btn btn-lg btn-primary me-5 mt-1 mb-1" href="add.php">Add To Menu</a>
   </div>
 </nav>
-</body>
