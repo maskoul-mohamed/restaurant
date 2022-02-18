@@ -16,7 +16,6 @@
         mysqli_free_result($result);
         mysqli_close($conn);
 
-        print_r($meal);
     }
 ?>
 
@@ -29,7 +28,9 @@
     <?php if($meal): ?>
         <h4><?php echo htmlspecialchars($meal['name']) ?></h4>
         <p>Address: <?php echo htmlspecialchars($meal['address'])?></p>
+        <p>Created At: <?php echo htmlspecialchars($meal['createdAt']) ?></p>
     <?php else: ?>
+        <p class="h4 text-warning">No such meal exists!</p>
     <?php endif; ?>
     <?php include 'templates/footer.php' ?>
     </div>
