@@ -35,7 +35,7 @@
                 <div class="card-body">
                     <h5 class="card-title"><?php echo htmlspecialchars($meal['name']) ?></h5>
                     <p class="card-text"><?php echo htmlspecialchars($meal['address'])?></p>
-                    <a href="#" class="btn btn-primary text-end">more info</a>
+                    <a href="details.php?id=<?php echo $meal['id']?>" class="btn btn-primary text-end">more info</a>
                 </div>
             </div>
         </div>
