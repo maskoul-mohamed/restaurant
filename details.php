@@ -1,6 +1,18 @@
 <?php
     include 'config/db_connect.php';
 
+    if(isset($_POST['delete'])){
+        $id = mysqli_real_escape_string($conn, $_POST['id_to_delete']);
+
+        $sql = "DELETE  FROM food WHERE id = $id";
+
+        if(mysqli_query($conn, $sql)){
+            header('Location: index.php');
+        }else {
+            echo 'query error: ' . mysqli_error($conn);
+        }
+    }
+
     if(isset($_GET['id'])){
         $id = mysqli_real_escape_string($conn, $_GET['id']);
 
@@ -29,6 +41,11 @@
         <h4><?php echo htmlspecialchars($meal['name']) ?></h4>
         <p>Address: <?php echo htmlspecialchars($meal['address'])?></p>
         <p>Created At: <?php echo htmlspecialchars($meal['createdAt']) ?></p>
+
+        <form action="" method="POST">
+            <input type="hidden" name="id_to_delete" value= <?php echo $meal['id']?>>
+            <input type="submit" name="delete" value="Delete" class="btn btn-secondary">
+        </form>
     <?php else: ?>
         <p class="h4 text-warning">No such meal exists!</p>
     <?php endif; ?>

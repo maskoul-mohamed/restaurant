@@ -10,7 +10,8 @@
 <nav class="container-fluid navbar navbar-light bg-light">
 
   <div class="container-fluid ">
-    <h1 class="me-5 mt-1 mb-1 text-primary">SoliFood</h1>
-    <a class="btn btn-lg btn-primary me-5 mt-1 mb-1" href="add.php">Add a Meal</a>
+  <a class="navbar-brand me-5 mt-1 mb-1  text-primary" href="index.php">SoliFood</a>
+    <a class="btn btn-md btn-primary me-5 mt-1 mb-1" href="add.php">Add a Meal</a>
+
   </div>
 </nav>
